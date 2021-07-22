@@ -1,5 +1,3 @@
-# maven-circleci
+# Seppuku
 
-Test setup for maven and circleci
-
-Test again 1
+A mediocre sudoku solver.
