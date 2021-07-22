@@ -1,10 +1,10 @@
-package cheesefish.mavencircleci;
+package richarduggelberg.seppuku;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class Seppuku 
 {
     public static void main( String[] args )
     {
