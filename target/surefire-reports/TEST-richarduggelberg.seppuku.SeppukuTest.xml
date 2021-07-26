@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="richarduggelberg.seppuku.SeppukuTest" time="0.074" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="richarduggelberg.seppuku.SeppukuTest" time="0.09" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -15,7 +15,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/richard/github/seppuku/target/surefire 2021-07-26T10-13-29_494-jvmRun1 surefire3557622276129811884tmp surefire_04876368625605177855tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/richard/github/seppuku/target/surefire 2021-07-26T10-28-11_039-jvmRun1 surefire2316322370603566179tmp surefire_06786688213703809907tmp"/>
     <property name="surefire.test.class.path" value="/home/richard/github/seppuku/target/test-classes:/home/richard/github/seppuku/target/classes:/home/richard/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/richard/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/richard"/>
@@ -56,5 +56,5 @@
     <property name="java.class.version" value="52.0"/>
   </properties>
   <testcase name="shouldAnswerWithTrue" classname="richarduggelberg.seppuku.SeppukuTest" time="0.003"/>
-  <testcase name="testIsCorrectOnSimple4x4Solution" classname="richarduggelberg.seppuku.SeppukuTest" time="0"/>
+  <testcase name="testIsCorrectOnSimple4x4Solution" classname="richarduggelberg.seppuku.SeppukuTest" time="0.001"/>
 </testsuite>
