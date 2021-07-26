@@ -22,8 +22,8 @@ public class SeppukuTest
     @Test
     public void isCorrect_validSolution_true()
     {
-    	int size = 2;
-    	Board b = new Board(2);
+    	int size = 4;
+    	Board b = new Board(4);
     	int[] row1 = {1,2,3,4};
     	int[] row2 = {3,4,1,2};
     	int[] row3 = {2,3,4,1};
@@ -38,8 +38,8 @@ public class SeppukuTest
     @Test
     public void isCorrect_invalidSolution_false()
     {
-        int size = 2;
-        Board b = new Board(2);
+        int size = 4;
+        Board b = new Board(4);
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};
         int[] row3 = {2,3,4,1};
