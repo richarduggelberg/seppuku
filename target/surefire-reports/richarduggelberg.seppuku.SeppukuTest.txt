@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: richarduggelberg.seppuku.SeppukuTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.076 s <<< FAILURE! - in richarduggelberg.seppuku.SeppukuTest
-isCorrect_invalidSolution_false(richarduggelberg.seppuku.SeppukuTest)  Time elapsed: 0.007 s  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.097 s <<< FAILURE! - in richarduggelberg.seppuku.SeppukuTest
+isCorrect_invalidSolution_false(richarduggelberg.seppuku.SeppukuTest)  Time elapsed: 0.012 s  <<< FAILURE!
 java.lang.AssertionError
 	at richarduggelberg.seppuku.SeppukuTest.isCorrect_invalidSolution_false(SeppukuTest.java:51)
 
