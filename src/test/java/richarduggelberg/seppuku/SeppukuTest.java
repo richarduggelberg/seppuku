@@ -42,7 +42,7 @@ public class SeppukuTest
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};
         int[] row3 = {2,3,4,1};
-        int[] row4 = {4,1,2,3};
+        int[] row4 = {4,2,1,3};
         b.setRow(1, row1);
         b.setRow(2, row2);
         b.setRow(3, row3);
