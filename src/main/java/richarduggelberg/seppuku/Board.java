@@ -18,6 +18,22 @@ public class Board {
 		}
 	}
 
+	public int getWidth() {
+		return width;
+	}
+
+	public int getBoxWidth() {
+		return boxWidth;
+	}
+
+	public int getValue(int i, int j) {
+		return board[i][j];
+	}
+
+	public void setValue(int i, int j, int value) {
+		board[i][j] = value;
+	}
+
 	public void setRow(int rowNumber, int[] values) {
 		for (int i = 0; i < width; i++) {
 			board[rowNumber-1][i] = values[i];
@@ -31,7 +47,7 @@ public class Board {
 		return boxes && rows && columns;
 	}
 
-	public boolean boxesCorrect() {
+	public int[][] getBoxes() {
 		int[][] boxes = new int[width][width];
 		for (int i = 0; i < width; i++) {
 			for (int j = 0; j < width; j++) {
@@ -45,6 +61,12 @@ public class Board {
 			}
 		}
 
+		return boxes;
+	}
+
+	public boolean boxesCorrect() {
+		int[][] boxes = getBoxes();
+
 		for (int i = 0; i < width; i++) {
 			if (containsError(boxes[i])) {
 				return false;
@@ -53,13 +75,19 @@ public class Board {
 		return true;
 	}
 
-	public boolean rowsCorrect() {
+	public int[][] getRows() {
 		int[][] rows = new int[width][width];
 		for (int i = 0; i < width; i++) {
 			for (int j = 0; j < width; j++) {
 				rows[i][j] = board[i][j];
 			}
 		}
+
+		return rows;
+	}
+
+	public boolean rowsCorrect() {
+		int[][] rows = getRows();
 
 		for (int i = 0; i < width; i++) {
 			if (containsError(rows[i])) {
@@ -69,13 +97,18 @@ public class Board {
 		return true;
 	}
 
-	public boolean columnsCorrect() {
+	public int[][] getColumns() {
 		int[][] columns = new int[width][width];
 		for (int i = 0; i < width; i++) {
 			for (int j = 0; j < width; j++) {
 				columns[i][j] = board[j][i];
 			}
 		}
+		return columns;
+	}
+
+	public boolean columnsCorrect() {
+		int[][] columns = getColumns();
 
 		for (int i = 0; i < width; i++) {
 			if (containsError(columns[i])) {
