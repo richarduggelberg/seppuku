@@ -23,6 +23,7 @@ public class Solver {
 			}
 			System.out.println("");
 		}
+		System.out.println("");
 	}
 
 	public boolean allSinglesRemoved() {
@@ -37,14 +38,12 @@ public class Solver {
 	}
 
 	public void solve() {
-		System.out.println("---------------------------------------------------------------------------------------");
 		for (int i = 0; i < 100; i++) {
 			checkExisting();
 			checkRows();
 			checkColumns();
 			checkBoxes();
 			checkSingles();
-			printPossibleValues();
 			if (allSinglesRemoved()) {
 				break;
 			}
@@ -109,18 +108,18 @@ public class Solver {
 
 		for (int i = 0; i < width; i++) {
 			for (int j = 0; j < width; j++) {
-				for (int k = 0; k < width; k++) {
-					if (boxes[i][k] >= 1 && boxes[i][k] <= width) {
+				if (boxes[i][j] >= 1 && boxes[i][j] <= width) {
+					for (int k = 0; k < width; k++) {
 						int boxWidth = b.getBoxWidth();
 						int boxRow = (int) Math.floor(i/boxWidth);
-						int boxCol = (int) Math.floor(j/boxWidth);
+						int boxCol = (int) Math.floor(k/boxWidth);
 						int boxPosi = i%boxWidth;
-						int boxPosj = j%boxWidth;
+						int boxPosj = k%boxWidth;
 						int boxNumber = boxWidth * boxRow + boxCol;
 						int boxPosition = boxWidth * boxPosi + boxPosj;
 						possibleValues.get(boxNumber).get(boxPosition).remove((Integer) boxes[i][j]);
 					}
-				}
+				}			
 			}
 		}
 	}

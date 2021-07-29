@@ -343,7 +343,6 @@ public class SolverTest {
         b.setRow(9, row9);
 
         Solver s = new Solver(b);
-        System.out.println("THIS ONE");
     	s.solve();
     	Board solved = s.getSolved();
         assertTrue(solved.isCorrect());
