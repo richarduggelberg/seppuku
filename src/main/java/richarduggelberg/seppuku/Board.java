@@ -158,6 +158,12 @@ public class Board {
 			String row = "";
 			for (int j = 0; j < width; j++) {
 				row += "" + board[i][j] + " ";
+				if ((j+1)%boxWidth == 0) {
+					row += " ";
+				}
+			}
+			if ((i+1)%boxWidth == 0) {
+				row += "\n";
 			}
 			System.out.println(row);
 		}
