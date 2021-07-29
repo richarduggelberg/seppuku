@@ -22,7 +22,6 @@ public class BoardTest
     @Test
     public void isCorrect_validSolution_true()
     {
-    	int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {1,2,3,4};
     	int[] row2 = {3,4,1,2};
@@ -38,7 +37,6 @@ public class BoardTest
     @Test
     public void isCorrect_invalidSolution1_false()
     {
-        int size = 4;
         Board b = new Board(4);
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};
@@ -54,7 +52,6 @@ public class BoardTest
     @Test
     public void isCorrect_invalidSolution2_false()
     {
-        int size = 4;
         Board b = new Board(4);
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};

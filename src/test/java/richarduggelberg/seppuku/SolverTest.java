@@ -11,7 +11,6 @@ public class SolverTest {
 	
 	@Test
 	public void solve_simpleTask1_isCorrectTrue() {
-		int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
     	int[] row2 = {3,4,1,2};
@@ -31,7 +30,6 @@ public class SolverTest {
 	
 	@Test
 	public void solve_simpleTask2_isCorrectTrue() {
-		int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {0,2,3,4};
     	int[] row2 = {3,4,0,2};
@@ -50,7 +48,6 @@ public class SolverTest {
 
 	@Test
 	public void solve_simpleTask3_isCorrectTrue() {
-		int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {0,0,3,4};
     	int[] row2 = {0,0,1,2};
@@ -69,7 +66,6 @@ public class SolverTest {
 
 	@Test
 	public void solve_simpleTask4_isCorrectTrue() {
-		int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
     	int[] row2 = {0,0,1,2};
@@ -88,7 +84,6 @@ public class SolverTest {
 
 	@Test
 	public void solve_ALittleHarderTask1_isCorrectTrue() {
-		int size = 4;
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
     	int[] row2 = {0,0,1,0};
