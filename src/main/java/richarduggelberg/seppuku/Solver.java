@@ -43,6 +43,8 @@ public class Solver {
 			checkRows();
 			checkColumns();
 			checkBoxes();
+			checkLackingRows();
+			checkLackingColumns();
 			checkSingles();
 			if (allSinglesRemoved()) {
 				break;
@@ -132,6 +134,82 @@ public class Solver {
 				}
 			}
 		}
+	}
+
+	public boolean rowLacksNumber(int row, int number) {
+		for (int i = 0; i < width; i++) {
+			if (b.getValue(row, i) == number) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public ArrayList<Integer> possiblePlacesInRow(int row, int number) {
+		ArrayList<Integer> indices = new ArrayList<Integer>();
+		for (int i = 0; i < width; i++) {
+			if (possibleValues.get(row).get(i).contains(number)) {
+				indices.add(i);
+			}
+		}
+		return indices;
+	}
+
+	public boolean onlyOnePossiblePlaceInRow(int row, int number) {
+		if (possiblePlacesInRow(row, number).size() == 1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public void checkLackingRows() {
+		for (int i = 0; i < width; i++) {
+			for (int j = 0; j < width; j++) {
+				if (rowLacksNumber(i,j) && onlyOnePossiblePlaceInRow(i,j)) {
+					b.setValue(i,possiblePlacesInRow(i,j).get(0),j);
+				}
+			}
+		} 
+	}
+
+	public boolean columnLacksNumber(int column, int number) {
+		for (int i = 0; i < width; i++) {
+			if (b.getValue(column, i) == number) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public ArrayList<Integer> possiblePlacesInColumns(int column, int number) {
+		ArrayList<Integer> indices = new ArrayList<Integer>();
+		for (int i = 0; i < width; i++) {
+			if (possibleValues.get(column).get(i).contains(number)) {
+				indices.add(i);
+			}
+		}
+		return indices;
+	}
+
+	public boolean onlyOnePossiblePlaceInColumn(int column, int number) {
+		if (possiblePlacesInColumns(column, number).size() == 1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public void checkLackingColumns() {
+		for (int i = 0; i < width; i++) {
+			for (int j = 0; j < width; j++) {
+				if (columnLacksNumber(i,j) && onlyOnePossiblePlaceInColumn(i,j)) {
+					b.setValue(possiblePlacesInColumns(i,j).get(0),i,j);
+				}
+			}
+		} 
 	}
 
 	public Board getSolved() {

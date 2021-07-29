@@ -378,4 +378,35 @@ public class SolverTest {
     	Board solved = s.getSolved();
         assertTrue(solved.isCorrect());
     }
+
+    @Test
+    public void solve_9x9FromOnlineEasy3_isCorrectTrue() {
+        Board b = new Board(9);
+        int[] row1 = {4,0,0, 8,5,0, 0,0,3};
+        int[] row2 = {0,0,0, 0,3,4, 0,0,0};
+        int[] row3 = {6,8,3, 0,0,9, 0,5,4};
+
+        int[] row4 = {0,4,0, 0,0,0, 7,2,0};
+        int[] row5 = {0,0,6, 3,4,0, 0,9,0};
+        int[] row6 = {0,0,1, 6,0,2, 0,0,5};
+
+        int[] row7 = {0,0,0, 0,6,8, 4,0,9};
+        int[] row8 = {0,0,8, 0,0,3, 1,0,2};
+        int[] row9 = {7,0,4, 0,2,1, 5,3,8};
+
+        b.setRow(1, row1);
+        b.setRow(2, row2);
+        b.setRow(3, row3);
+        b.setRow(4, row4);
+        b.setRow(5, row5);
+        b.setRow(6, row6);
+        b.setRow(7, row7);
+        b.setRow(8, row8);
+        b.setRow(9, row9);
+
+        Solver s = new Solver(b);
+    	s.solve();
+    	Board solved = s.getSolved();
+        assertTrue(solved.isCorrect());
+    }
 }
