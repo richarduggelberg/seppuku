@@ -37,12 +37,14 @@ public class Solver {
 	}
 
 	public void solve() {
+		System.out.println("---------------------------------------------------------------------------------------");
 		for (int i = 0; i < 100; i++) {
 			checkExisting();
 			checkRows();
 			checkColumns();
 			checkBoxes();
 			checkSingles();
+			printPossibleValues();
 			if (allSinglesRemoved()) {
 				break;
 			}
