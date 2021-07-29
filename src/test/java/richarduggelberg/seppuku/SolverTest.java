@@ -96,7 +96,6 @@ public class SolverTest {
 
     	Solver s = new Solver(b);
     	s.solve();
-    	s.printPossibleValues();
     	Board solved = s.getSolved();
         assertTrue(solved.isCorrect());
 	}
