@@ -318,7 +318,7 @@ public class SolverTest {
     }
 
     @Test
-    public void solve_9x9FromOnlineEasy_isCorrectTrue() {
+    public void solve_9x9FromOnlineEasy1_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,4,0, 0,3,0, 0,0,9};
         int[] row2 = {9,8,5, 1,0,2, 0,0,4};
@@ -331,6 +331,37 @@ public class SolverTest {
         int[] row7 = {0,0,0, 0,2,0, 8,0,0};
         int[] row8 = {7,1,0, 3,0,5, 0,0,0};
         int[] row9 = {0,6,0, 0,0,1, 4,0,0};
+
+        b.setRow(1, row1);
+        b.setRow(2, row2);
+        b.setRow(3, row3);
+        b.setRow(4, row4);
+        b.setRow(5, row5);
+        b.setRow(6, row6);
+        b.setRow(7, row7);
+        b.setRow(8, row8);
+        b.setRow(9, row9);
+
+        Solver s = new Solver(b);
+    	s.solve();
+    	Board solved = s.getSolved();
+        assertTrue(solved.isCorrect());
+    }
+
+    @Test
+    public void solve_9x9FromOnlineEasy2_isCorrectTrue() {
+        Board b = new Board(9);
+        int[] row1 = {3,0,4, 0,7,0, 0,0,0};
+        int[] row2 = {2,7,0, 0,0,0, 1,4,0};
+        int[] row3 = {0,0,0, 9,0,0, 0,0,3};
+
+        int[] row4 = {0,1,0, 0,9,6, 0,0,0};
+        int[] row5 = {8,9,2, 0,5,3, 4,0,7};
+        int[] row6 = {4,0,6, 0,8,7, 5,9,1};
+
+        int[] row7 = {0,0,0, 8,1,0, 6,0,4};
+        int[] row8 = {0,0,8, 7,0,0, 9,3,0};
+        int[] row9 = {0,2,0, 0,4,0, 0,0,0};
 
         b.setRow(1, row1);
         b.setRow(2, row2);
