@@ -5,23 +5,14 @@ import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class BoardTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class BoardTest {
     @Test
-    public void shouldAnswerWithTrue()
-    {
+    public void shouldAnswerWithTrue() {
         assertTrue( true );
     }
 
     @Test
-    public void isCorrect_validSolution_true()
-    {
+    public void isCorrect_validSolution_true() {
     	Board b = new Board(4);
     	int[] row1 = {1,2,3,4};
     	int[] row2 = {3,4,1,2};
@@ -35,8 +26,7 @@ public class BoardTest
     }
 
     @Test
-    public void isCorrect_invalidSolution1_false()
-    {
+    public void isCorrect_invalidSolution1_false() {
         Board b = new Board(4);
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};
@@ -50,8 +40,7 @@ public class BoardTest
     }
 
     @Test
-    public void isCorrect_invalidSolution2_false()
-    {
+    public void isCorrect_invalidSolution2_false() {
         Board b = new Board(4);
         int[] row1 = {1,2,3,4};
         int[] row2 = {3,4,1,2};
