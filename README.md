@@ -9,6 +9,34 @@ This repository serves as a possible basis for such experiments.
 
 
 ## Test metrics
-* Line Coverage: 88%
-* Branch Coverage: 84%
-* Mutation Score: 65%
+
+### Cobertura
+
+##### Overall
+* Line Coverage: 84%
+* Branch Coverage: 81%
+
+##### Board.java
+* Line Coverage: 79%
+* Branch Coverage: 71%
+
+##### Solver.java
+* Line Coverage: 90%
+* Branch Coverage: 88%
+
+### Pitest
+
+##### Overall
+* Line Coverage: 86%
+* Mutation Score: 63%
+* Test Strength: 71%
+
+##### Board.java
+* Line Coverage: 80%
+* Mutation Score: 72%
+* Test Strength: 88%
+
+##### Solver.java
+* Line Coverage: 91%
+* Mutation Score: 56%
+* Test Strength: 61%
