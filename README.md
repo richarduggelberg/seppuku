@@ -9,6 +9,6 @@ This repository serves as a possible basis for such experiments.
 
 
 ## Test metrics
-* Line Coverage: 90%
-* Branch Coverage: 87%
-* Mutation Score: 79%
+* Line Coverage: 88%
+* Branch Coverage: 84%
+* Mutation Score: 65%
