@@ -7,11 +7,6 @@ import org.junit.Test;
 
 public class BoardTest {
     @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue( true );
-    }
-
-    @Test
     public void isCorrect_validSolution_true() {
     	Board b = new Board(4);
     	int[] row1 = {1,2,3,4};
