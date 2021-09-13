@@ -4,12 +4,13 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
+import net.jqwik.api.*;
 
 import java.util.ArrayList;
 
 public class SolverTest {
 	
-	@Test
+	@Example
 	public void solve_simpleTask1_isCorrectTrue() {
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
@@ -28,7 +29,7 @@ public class SolverTest {
 	}
 
 	
-	@Test
+	@Example
 	public void solve_simpleTask2_isCorrectTrue() {
     	Board b = new Board(4);
     	int[] row1 = {0,2,3,4};
@@ -46,7 +47,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
 	}
 
-	@Test
+	@Example
 	public void solve_simpleTask3_isCorrectTrue() {
     	Board b = new Board(4);
     	int[] row1 = {0,0,3,4};
@@ -64,7 +65,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
 	}
 
-	@Test
+	@Example
 	public void solve_simpleTask4_isCorrectTrue() {
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
@@ -82,7 +83,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
 	}
 
-	@Test
+	@Example
 	public void solve_ALittleHarderTask1_isCorrectTrue() {
     	Board b = new Board(4);
     	int[] row1 = {1,0,3,4};
@@ -100,7 +101,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
 	}
 
-	@Test
+	@Example
     public void solve_9x9task1_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,2,3,4,5,6,7,8,9};
@@ -131,7 +132,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task2_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,2,3,4,5,6,7,8,9};
@@ -162,7 +163,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task3_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,2,3,4,5,6,7,8,9};
@@ -193,7 +194,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task4_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,0,0,4,5,6,7,8,9};
@@ -224,7 +225,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task5_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,0,0,0,0,0,0,0,0};
@@ -255,7 +256,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task6_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,0,0,0,0,0,0,0,0};
@@ -286,7 +287,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9task7_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,0,0,0,0,0,0,0,0};
@@ -317,7 +318,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9FromOnlineEasy1_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {0,4,0, 0,3,0, 0,0,9};
@@ -348,7 +349,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9FromOnlineEasy2_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {3,0,4, 0,7,0, 0,0,0};
@@ -379,7 +380,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_9x9FromOnlineEasy3_isCorrectTrue() {
         Board b = new Board(9);
         int[] row1 = {4,0,0, 8,5,0, 0,0,3};
@@ -410,7 +411,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_16x16easyTask1_isCorrectTrue() {
 
         Board b = new Board(16);
@@ -459,7 +460,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_16x16easyTask2_isCorrectTrue() {
 
         Board b = new Board(16);
@@ -508,7 +509,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-    @Test
+    @Example
     public void solve_16x16easyTask3_isCorrectTrue() {
 
         Board b = new Board(16);
@@ -557,7 +558,7 @@ public class SolverTest {
         assertTrue(solved.isCorrect());
     }
 
-     @Test
+     @Example
     public void solve_16x16easyTask4_isCorrectTrue() {
 
         Board b = new Board(16);
