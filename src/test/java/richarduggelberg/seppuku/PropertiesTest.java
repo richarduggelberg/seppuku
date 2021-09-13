@@ -48,4 +48,59 @@ public class PropertiesTest {
 	    .ofMaxSize(5)
         .filter(a -> !(containsErrorFalseGenerator().allValues().get().anyMatch(b -> (Arrays.equals(a,b)))));
 	}
+
+	@Property
+	void solve_isCorrect_true(
+		@ForAll("validRow1Generator") int[] row1,
+		@ForAll("validRow2Generator") int[] row2,
+		@ForAll("validRow3Generator") int[] row3,
+		@ForAll("validRow4Generator") int[] row4)
+	{
+		Board b = new Board(4);
+		b.setRow(1, row1);
+    	b.setRow(2, row2);
+    	b.setRow(3, row3);
+    	b.setRow(4, row4);
+
+    	Solver s = new Solver(b);
+    	s.solve();
+    	Board solved = s.getSolved();
+        assertTrue(solved.isCorrect());
+	}
+
+	@Provide
+	Arbitrary<int[]> validRow1Generator() {
+		return Arbitraries
+		.of(0,1,2,3,4)
+		.array(int[].class)
+		.ofSize(4)
+		.uniqueElements();
+	}
+
+	@Provide
+	Arbitrary<int[]> validRow2Generator() {
+		return Arbitraries
+		.of(0,1,2,3,4)
+		.array(int[].class)
+		.ofSize(4)
+		.uniqueElements();
+	}
+
+	@Provide
+	Arbitrary<int[]> validRow3Generator() {
+		return Arbitraries
+		.of(0,1,2,3,4)
+		.array(int[].class)
+		.ofSize(4)
+		.uniqueElements();
+	}
+
+	@Provide
+	Arbitrary<int[]> validRow4Generator() {
+		return Arbitraries
+		.of(0,1,2,3,4)
+		.array(int[].class)
+		.ofSize(4)
+		.uniqueElements();
+	}
 }
