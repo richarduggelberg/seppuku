@@ -1,0 +1,864 @@
+===========================================================================
+richarduggelberg.seppuku.Board:::OBJECT
+this.width == size(this.board[])
+this.width one of { 4, 9, 16 }
+this.board != null
+this.board.getClass().getName() == int[][].class
+this.board[] elements != null
+this.boxWidth one of { 2, 3, 4 }
+this.width % this.boxWidth == 0
+this.width == this.boxWidth**2
+this.boxWidth < size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.Board(int):::ENTER
+width one of { 4, 9, 16 }
+===========================================================================
+richarduggelberg.seppuku.Board.Board(int):::EXIT
+this.width == orig(width)
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT136
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT136;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT139
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT139;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+(return == false)  ==>  (this.boxWidth one of { 2, 3 })
+(return == false)  ==>  (this.width one of { 4, 9 })
+(return == true)  ==>  (this.boxWidth one of { 2, 3, 4 })
+(return == true)  ==>  (this.width one of { 4, 9, 16 })
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.boxesCorrect():::EXIT;condition="not(return == true)"
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT202
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT202;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT205
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT205;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+(return == false)  ==>  (this.boxWidth one of { 2, 3 })
+(return == false)  ==>  (this.width one of { 4, 9 })
+(return == true)  ==>  (this.boxWidth one of { 2, 3, 4 })
+(return == true)  ==>  (this.width one of { 4, 9, 16 })
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.columnsCorrect():::EXIT;condition="not(return == true)"
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::ENTER
+boxRowCol != null
+boxRowCol[this.boxWidth] >= 1
+boxRowCol[this.boxWidth-1] >= 1
+this.width <= size(boxRowCol[])
+this.width >= size(boxRowCol[])-1
+this.width >= boxRowCol[this.boxWidth]
+this.boxWidth in boxRowCol[]
+this.boxWidth < size(boxRowCol[])-1
+size(this.board[])-1 <= size(boxRowCol[])-1
+size(boxRowCol[]) >= boxRowCol[this.boxWidth]
+boxRowCol[this.width-1] != boxRowCol[this.boxWidth]
+boxRowCol[this.width-1] != boxRowCol[this.boxWidth-1]
+boxRowCol[this.boxWidth] != boxRowCol[this.boxWidth-1]
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT219
+this.width == size(boxRowCol[])-1
+this.width == orig(size(boxRowCol[]))-1
+this.width == boxRowCol[this.width-1]
+this.width == orig(boxRowCol[post(this.width)-1])
+this.width == boxRowCol[orig(this.width)-1]
+this.width == orig(boxRowCol[this.width-1])
+this.boxWidth == boxRowCol[this.boxWidth-1]
+this.boxWidth == orig(boxRowCol[post(this.boxWidth)-1])
+this.boxWidth == boxRowCol[orig(this.boxWidth)-1]
+this.boxWidth == orig(boxRowCol[this.boxWidth-1])
+size(this.board[])-1 == boxRowCol[this.boxWidth]
+size(this.board[])-1 == orig(boxRowCol[post(this.boxWidth)])
+size(this.board[])-1 == boxRowCol[orig(this.boxWidth)]
+size(this.board[])-1 == orig(boxRowCol[this.boxWidth])
+orig(size(boxRowCol[])) == boxRowCol[this.width]
+orig(size(boxRowCol[])) == orig(boxRowCol[post(this.width)])
+orig(size(boxRowCol[])) == boxRowCol[orig(this.width)]
+orig(size(boxRowCol[])) == orig(boxRowCol[this.width])
+this.board has only one value
+this.board[] contains no nulls and has only one value, of length 4
+this.boxWidth == 2
+boxRowCol[] == [1, 2, 3, 4, 5]
+return == true
+orig(this) has only one value
+orig(boxRowCol) has only one value
+orig(size(boxRowCol[])) == 5
+this.board[this.width-1] has only one value
+this.board[this.boxWidth] has only one value
+this.board[this.boxWidth-1] has only one value
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT219;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT225
+this.width == orig(size(boxRowCol[]))
+this.width == 4
+this.boxWidth == 2
+return == true
+boxRowCol[this.width-1] one of { 0, 4, 5 }
+boxRowCol[this.boxWidth] one of { 1, 2 }
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT225;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT233
+this.width == orig(size(boxRowCol[]))
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+boxRowCol[] elements >= 1
+return == true
+boxRowCol[] elements <= this.width
+this.width >= boxRowCol[this.width-1]
+this.width >= boxRowCol[this.boxWidth-1]
+size(boxRowCol[])-1 in boxRowCol[]
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT233;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT252
+this.width == orig(size(boxRowCol[]))
+boxRowCol[] elements >= 1
+return == false
+boxRowCol[] elements <= this.width
+this.width in boxRowCol[]
+this.width >= boxRowCol[this.width-1]
+this.width >= boxRowCol[this.boxWidth-1]
+size(boxRowCol[])-1 in boxRowCol[]
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT252;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+boxRowCol[] == orig(boxRowCol[])
+(return == false)  ==>  (boxRowCol[] elements <= orig(size(boxRowCol[])))
+(return == false)  ==>  (boxRowCol[] elements <= this.width)
+(return == false)  ==>  (boxRowCol[] elements >= 1)
+(return == false)  ==>  (orig(size(boxRowCol[])) % this.boxWidth == 0)
+(return == false)  ==>  (orig(size(boxRowCol[])) == this.boxWidth**2)
+(return == false)  ==>  (orig(size(boxRowCol[])) >= boxRowCol[this.boxWidth-1])
+(return == false)  ==>  (orig(size(boxRowCol[])) >= boxRowCol[this.width-1])
+(return == false)  ==>  (orig(size(boxRowCol[])) in boxRowCol[])
+(return == false)  ==>  (orig(size(boxRowCol[])) one of { 4, 9, 16 })
+(return == false)  ==>  (size(boxRowCol[])-1 in boxRowCol[])
+(return == false)  ==>  (size(this.board[])-1 in boxRowCol[])
+(return == false)  ==>  (this.boxWidth one of { 2, 3, 4 })
+(return == false)  ==>  (this.width == orig(size(boxRowCol[])))
+(return == false)  ==>  (this.width >= boxRowCol[this.boxWidth-1])
+(return == false)  ==>  (this.width >= boxRowCol[this.width-1])
+(return == false)  ==>  (this.width in boxRowCol[])
+(return == false)  ==>  (this.width one of { 4, 9, 16 })
+(return == true)  ==>  (orig(size(boxRowCol[])) one of { 4, 5, 9 })
+(return == true)  ==>  (this.boxWidth one of { 2, 3 })
+(return == true)  ==>  (this.width one of { 4, 9 })
+boxRowCol[this.boxWidth] >= 1
+boxRowCol[this.boxWidth-1] >= 1
+this.width >= size(boxRowCol[])-1
+this.width <= orig(size(boxRowCol[]))
+this.width >= boxRowCol[this.boxWidth]
+this.boxWidth in boxRowCol[]
+this.boxWidth < size(boxRowCol[])-1
+size(this.board[])-1 <= size(boxRowCol[])-1
+orig(size(boxRowCol[])) >= boxRowCol[this.boxWidth]
+boxRowCol[this.width-1] != boxRowCol[this.boxWidth]
+boxRowCol[this.width-1] != boxRowCol[this.boxWidth-1]
+boxRowCol[this.boxWidth] != boxRowCol[this.boxWidth-1]
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT;condition="return == true"
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == true
+orig(size(boxRowCol[])) one of { 4, 5, 9 }
+===========================================================================
+richarduggelberg.seppuku.Board.containsError(int[]):::EXIT;condition="not(return == true)"
+this.width == orig(size(boxRowCol[]))
+boxRowCol[] elements >= 1
+return == false
+boxRowCol[] elements <= this.width
+this.width in boxRowCol[]
+this.width >= boxRowCol[this.width-1]
+this.width >= boxRowCol[this.boxWidth-1]
+size(boxRowCol[])-1 in boxRowCol[]
+===========================================================================
+richarduggelberg.seppuku.Board.getBoxWidth():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.getBoxWidth():::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == return
+return == orig(this.boxWidth)
+return one of { 2, 3, 4 }
+this.width % return == 0
+this.width == return**2
+return < size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getBoxes():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.getBoxes():::EXIT
+this.width == orig(this.width)
+this.width == size(return[])
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == return.getClass().getName()
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+return.getClass().getName() == orig(this.board.getClass().getName())
+return != null
+return.getClass().getName() == int[][].class
+return[] elements != null
+this.boxWidth < size(return[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getColumns():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.getColumns():::EXIT
+this.width == orig(this.width)
+this.width == size(return[])
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == return.getClass().getName()
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+return.getClass().getName() == orig(this.board.getClass().getName())
+return != null
+return.getClass().getName() == int[][].class
+return[] elements != null
+this.boxWidth < size(return[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getRows():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.getRows():::EXIT
+this.width == orig(this.width)
+this.width == size(return[])
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == return.getClass().getName()
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+return.getClass().getName() == orig(this.board.getClass().getName())
+return != null
+return.getClass().getName() == int[][].class
+return[] elements != null
+this.boxWidth < size(return[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getValue(int, int):::ENTER
+i >= 0
+j >= 0
+i <= size(this.board[])-1
+j <= size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getValue(int, int):::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+return >= 0
+this.width >= return
+orig(i) <= size(this.board[])-1
+orig(j) <= size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.getWidth():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.getWidth():::EXIT
+this.width == return
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+return == orig(this.width)
+return == size(this.board[])
+return == orig(size(this.board[]))
+return one of { 4, 9, 16 }
+return % this.boxWidth == 0
+return == this.boxWidth**2
+===========================================================================
+richarduggelberg.seppuku.Board.isCorrect():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.isCorrect():::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+(return == false)  ==>  (this.boxWidth one of { 2, 3 })
+(return == false)  ==>  (this.width one of { 4, 9 })
+(return == true)  ==>  (this.boxWidth one of { 2, 3, 4 })
+(return == true)  ==>  (this.width one of { 4, 9, 16 })
+===========================================================================
+richarduggelberg.seppuku.Board.isCorrect():::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.isCorrect():::EXIT;condition="not(return == true)"
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT169
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT169;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT172
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT172;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+(return == false)  ==>  (this.boxWidth one of { 2, 3 })
+(return == false)  ==>  (this.width one of { 4, 9 })
+(return == true)  ==>  (this.boxWidth one of { 2, 3, 4 })
+(return == true)  ==>  (this.width one of { 4, 9, 16 })
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Board.rowsCorrect():::EXIT;condition="not(return == true)"
+this.width one of { 4, 9 }
+this.boxWidth one of { 2, 3 }
+return == false
+===========================================================================
+richarduggelberg.seppuku.Board.setRow(int, int[]):::ENTER
+this.width == size(values[])
+rowNumber >= 1
+values != null
+values[] elements >= 0
+this.width >= rowNumber
+===========================================================================
+richarduggelberg.seppuku.Board.setRow(int, int[]):::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.width == orig(size(values[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+values[] == orig(values[])
+values[] elements >= 0
+this.width >= orig(rowNumber)
+this.boxWidth < size(values[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.setValue(int, int, int):::ENTER
+i >= 0
+j >= 0
+value >= 1
+this.width >= value
+i <= size(this.board[])-1
+j <= size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Board.setValue(int, int, int):::EXIT
+this.width == orig(this.width)
+this.width == orig(size(this.board[]))
+this.board == orig(this.board)
+this.board.getClass().getName() == orig(this.board.getClass().getName())
+this.board[] == orig(this.board[])
+this.boxWidth == orig(this.boxWidth)
+this.width >= orig(value)
+orig(i) <= size(this.board[])-1
+orig(j) <= size(this.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Seppuku.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+richarduggelberg.seppuku.Seppuku.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+richarduggelberg.seppuku.Solver:::OBJECT
+this.b.width == this.width
+this.width == size(this.b.board[])
+this.b != null
+this.b.board != null
+this.b.board.getClass().getName() == int[][].class
+this.b.board[] elements != null
+this.b.boxWidth one of { 2, 3, 4 }
+this.width one of { 4, 9, 16 }
+this.possibleValues[] elements != null
+this.possibleValues[].getClass().getName() elements == java.util.ArrayList.class
+size(this.possibleValues[]) one of { 4, 9, 16 }
+this.width % this.b.boxWidth == 0
+this.width == this.b.boxWidth**2
+this.b.boxWidth < size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.Solver(richarduggelberg.seppuku.Board):::ENTER
+b.width == size(b.board[])
+b != null
+b.width one of { 4, 9, 16 }
+b.board != null
+b.board.getClass().getName() == int[][].class
+b.board[] elements != null
+b.boxWidth one of { 2, 3, 4 }
+b.width % b.boxWidth == 0
+b.width == b.boxWidth**2
+b.boxWidth < size(b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.Solver(richarduggelberg.seppuku.Board):::EXIT
+this.b == orig(b)
+this.b.board == b.board
+this.b.board.getClass().getName() == b.board.getClass().getName()
+this.b.board[] == b.board[]
+this.b.boxWidth == b.boxWidth
+this.width == b.width
+this.width == orig(b.width)
+this.width == size(b.board[])
+this.width == orig(size(b.board[]))
+b.board == orig(b.board)
+b.board.getClass().getName() == orig(b.board.getClass().getName())
+b.board[] == orig(b.board[])
+b.boxWidth == orig(b.boxWidth)
+this.possibleValues == null
+b.board != null
+b.board.getClass().getName() == int[][].class
+b.board[] elements != null
+b.boxWidth one of { 2, 3, 4 }
+this.width % b.boxWidth == 0
+this.width == b.boxWidth**2
+b.boxWidth < size(b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT61
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT61;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT65
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT65;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.allSinglesRemoved():::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.checkBoxes():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkBoxes():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkColumns():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkColumns():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkExisting():::ENTER
+===========================================================================
+richarduggelberg.seppuku.Solver.checkExisting():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues[].getClass().getName() == orig(this.possibleValues[].getClass().getName())
+size(this.possibleValues[]) == orig(size(this.possibleValues[]))
+this.possibleValues != null
+this.possibleValues[].getClass().getName() == orig(this.possibleValues[].getClass().getName()) (elementwise)
+===========================================================================
+richarduggelberg.seppuku.Solver.checkLackingColumns():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkLackingColumns():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkLackingRows():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkLackingRows():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkRows():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkRows():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkSingles():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.checkSingles():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::ENTER
+this.possibleValues != null
+column >= 0
+number >= 0
+column <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT259
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT259;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT262
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT262;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+orig(column) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.columnLacksNumber(int, int):::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.getSolved():::ENTER
+this.possibleValues != null
+===========================================================================
+richarduggelberg.seppuku.Solver.getSolved():::EXIT
+this.b == return
+this.b.board == return.board
+this.b.board.getClass().getName() == return.board.getClass().getName()
+this.b.board[] == return.board[]
+this.b.boxWidth == return.boxWidth
+this.width == return.width
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == size(return.board[])
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+return == orig(this.b)
+return.board == orig(this.b.board)
+return.board.getClass().getName() == orig(this.b.board.getClass().getName())
+return.board[] == orig(this.b.board[])
+return.boxWidth == orig(this.b.boxWidth)
+this.possibleValues != null
+return != null
+return.board != null
+return.board.getClass().getName() == int[][].class
+return.board[] elements != null
+return.boxWidth one of { 2, 3, 4 }
+this.width % return.boxWidth == 0
+this.width == return.boxWidth**2
+return.boxWidth < size(return.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInColumn(int, int):::ENTER
+this.possibleValues != null
+column >= 0
+number >= 0
+column <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInColumn(int, int):::EXIT290
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInColumn(int, int):::EXIT290;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInColumn(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+return == false
+orig(column) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInColumn(int, int):::EXIT;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::ENTER
+this.possibleValues != null
+row >= 0
+number >= 0
+row <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT229
+return == true
+orig(number) >= 1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT229;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT232
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT232;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+(return == true)  ==>  (orig(number) >= 1)
+this.possibleValues != null
+orig(row) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT;condition="return == true"
+return == true
+orig(number) >= 1
+===========================================================================
+richarduggelberg.seppuku.Solver.onlyOnePossiblePlaceInRow(int, int):::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.possiblePlacesInColumns(int, int):::ENTER
+this.possibleValues != null
+column >= 0
+number >= 0
+column <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.possiblePlacesInColumns(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+return != null
+return[] elements != null
+return[].getClass().getName() elements == java.lang.Integer.class
+size(return[])-1 != 0
+orig(column) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.possiblePlacesInRow(int, int):::ENTER
+this.possibleValues != null
+row >= 0
+number >= 0
+row <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.possiblePlacesInRow(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+return != null
+return[] elements != null
+return[].getClass().getName() elements == java.lang.Integer.class
+orig(row) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::ENTER
+this.possibleValues != null
+row >= 0
+number >= 0
+row <= size(this.b.board[])-1
+number <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT201
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT201;condition="not(return == true)"
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT204
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT204;condition="return == true"
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues == orig(this.possibleValues)
+this.possibleValues[] == orig(this.possibleValues[])
+this.possibleValues != null
+orig(row) <= size(this.b.board[])-1
+orig(number) <= size(this.b.board[])-1
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT;condition="return == true"
+return == true
+===========================================================================
+richarduggelberg.seppuku.Solver.rowLacksNumber(int, int):::EXIT;condition="not(return == true)"
+return == false
+===========================================================================
+richarduggelberg.seppuku.Solver.solve():::ENTER
+this.possibleValues == null
+===========================================================================
+richarduggelberg.seppuku.Solver.solve():::EXIT
+this.b == orig(this.b)
+this.b.board == orig(this.b.board)
+this.b.board.getClass().getName() == orig(this.b.board.getClass().getName())
+this.b.board[] == orig(this.b.board[])
+this.b.boxWidth == orig(this.b.boxWidth)
+this.width == orig(this.b.width)
+this.width == orig(this.width)
+this.width == orig(size(this.b.board[]))
+this.possibleValues != null
