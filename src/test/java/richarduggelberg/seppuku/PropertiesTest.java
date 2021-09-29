@@ -14,56 +14,6 @@ import static org.junit.Assume.*;
 import static org.junit.Assert.*;
 
 public class PropertiesTest {
-	/*@Property
-	void containsErrorFalse(
-		@ForAll("containsErrorFalseSetGenerator") int[] set,
-		@ForAll("containsErrorFalseSizeGenerator") int size)
-	{
-		Assume.that(size == set.length);
-		Board b = new Board(size);
-		assertFalse(b.containsError(set));
-	}
-
-	@Provide
-	public Arbitrary<int[]> containsErrorFalseSetGenerator() {
-		return Arbitraries
-		.of(1,2,3,4)
-		.array(int[].class)
-		.ofSize(4)
-		.uniqueElements();
-	}
-
-	@Provide
-	public Arbitrary<Integer> containsErrorFalseSizeGenerator() {
-		return Arbitraries
-		.of(4);
-	}
-
-	@Property
-	void containsErrorTrue(
-		@ForAll("containsErrorTrueSetGenerator") int[] set,
-		@ForAll("containsErrorTrueSizeGenerator") int size) 
-	{
-		Board b = new Board(size);
-		assertTrue(b.containsError(set));
-	}
-
-	@Provide
-	Arbitrary<int[]> containsErrorTrueSetGenerator() {
-	    return Arbitraries
-	    .of(0,1,2,3,4,5)
-	    .array(int[].class)
-	    .ofMinSize(4)
-	    .ofMaxSize(5)
-        .filter(a -> !(containsErrorFalseSetGenerator().allValues().get().anyMatch(b -> (Arrays.equals(a,b)))));
-	}
-
-	@Provide
-	public Arbitrary<Integer> containsErrorTrueSizeGenerator() {
-		return Arbitraries
-		.of(4);
-	}*/
-
 	@Property (tries = 1000)
 	public void containsErrorFalse(
 		@ForAll("widths") int width,
@@ -80,14 +30,6 @@ public class PropertiesTest {
 		.of(4,9,16);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	@Provide
 	public Arbitrary<int[]> boxRowCol_false(
 		//(return == false)  ==>  (this.width one of { 4, 9, 16 })
@@ -124,18 +66,4 @@ public class PropertiesTest {
 		.filter(a -> Arrays.asList(a).contains(width))
 		;	
 	}
-
-	/*@Property
-	public void containsErrorTrue() {
-		
-	}
-
-	//(return == true)  ==>  (orig(size(boxRowCol[])) one of { 4, 5, 9 })
-	//(return == true)  ==>  (this.boxWidth one of { 2, 3 })
-	//(return == true)  ==>  (this.width one of { 4, 9 })
-	@Provide
-	public Arbitrary<int[]> boxRowCol_true() {
-		
-	}*/
-
 }
